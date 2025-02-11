@@ -19,4 +19,5 @@ RUN apt-get update && apt-get install -y \
     rdmacm-utils \
     tzdata
 
+RUN pip3 install -U 'xformers==0.0.28.post3' --index-url https://download.pytorch.org/whl/cu118
 RUN wget https://github.com/vllm-project/vllm/releases/download/v0.7.2/vllm-0.7.2+cu118-cp38-abi3-manylinux1_x86_64.whl && pip install vllm-0.7.2+cu118-cp38-abi3-manylinux1_x86_64.whl
