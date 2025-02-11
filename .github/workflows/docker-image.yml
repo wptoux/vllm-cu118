@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: DOCKER_BUILDKIT=1 docker build -f Dockerfile.cu118 --target vllm-openai --tag vllm-openai-cu118:$(date +%s)
+      run: DOCKER_BUILDKIT=1 docker build . -f Dockerfile.cu118 --target vllm-openai --tag vllm-openai-cu118:$(date +%s)
